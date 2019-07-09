@@ -13,7 +13,6 @@ class App < Sinatra::Base
   end
   
   get '/say/:number/:phrase' do 
-    puts params
     "#{params[:phrase]} " * params[:number].to_i
     # Note: #to_i is called on params[:number], not the entire line of code.
   end
