@@ -4,7 +4,6 @@ class App < Sinatra::Base
   # Write your code here!
   
   get '/reversename/:name' do 
-    puts params
     params[:name].reverse
   end
   
@@ -14,6 +13,7 @@ class App < Sinatra::Base
   end
   
   get '/say/:number/:phrase' do 
+    puts params
     "#{params[:phrase]} " * params[:number].to_i
     # Note: #to_i is called on params[:number], not the entire line of code.
   end
